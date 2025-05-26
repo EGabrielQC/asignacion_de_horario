@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
 //Peticion -- responde con Response -- registra que el aula a sido registrada.
 @Service
 //@RequiredArgsConstructor//Con esto estamos inyectando, aula repository se puede usar dentro de service.
-@Slf4j
+@Slf4j//habilitar automáticamente un logger --- registrador de eventos
 public class AulaService {
     @Autowired
     private AulaRepository aulaRepository;
@@ -34,10 +34,9 @@ public class AulaService {
            log.info("aula guardado correctamente");
            return new ApiResponse("Aula creado correctamente", aulaEntity);
        }catch (Exception e){
-           log.error("Error al crear Aula"+ e.getMessage());
+           log.error("Error al crear Aula{}", e.getMessage());
            return new ApiResponse("Error al crear el Aula"+ e.getMessage(), null);
        }
     }
-
 }
 

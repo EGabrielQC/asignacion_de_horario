@@ -29,6 +29,7 @@ public class CursoSeccionEntity {
     @ManyToOne(targetEntity = SeccionAcademicaEntity.class,fetch = FetchType.LAZY)
     @JoinColumn(name = "seccion_academica_id")
     private SeccionAcademicaEntity seccionAcademica;
+
     private String modo;
 
     //Relacion de llegada de HorarioEntity;?????
