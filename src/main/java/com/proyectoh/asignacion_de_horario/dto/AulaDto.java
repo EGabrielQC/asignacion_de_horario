@@ -1,15 +1,16 @@
-package com.proyectoh.asignacion_de_horario.dto.request;
+package com.proyectoh.asignacion_de_horario.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-//Request es la peticion del cliente, es quien manda el nombre capacidad del aula.
+//Capa de transferencia de datos
+//convertimos AulaEntity en AulaDto
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class AulaRequest {
+public class AulaDto {
+    private Integer id;
     private String nombre;
     private Integer capacidad;
     private String tipo;
